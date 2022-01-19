@@ -26,6 +26,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
+        name.put(1,"Алиаскар");
+        name.put(2,"Алишер");
         notifyDataSetChanged();
     }
 
@@ -83,6 +85,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             binding.tvUserId.setText(name.get(post.getUserId()));
             binding.tvTitle.setText(post.getTitle());
             binding.tvContent.setText(post.getContent());
+            binding.tvGroup.setText(String.valueOf(post.getGroupId()));
         }
     }
 }
